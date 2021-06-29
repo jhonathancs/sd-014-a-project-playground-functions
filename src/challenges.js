@@ -95,18 +95,65 @@ function fizzBuzz(jhon) {
   return resultado;
 }
 
-// console.log(fizzBuzz([2, 15, 7, 9, 45]))
+//  console.log(fizzBuzz([2, 15, 7, 9, 45]))
 // console.log(fizzBuzz([7, 9]))
 // console.log(fizzBuzz([9, 25]))
 
 
-// Desafio 9
-function encode() {
-  // seu código aqui
+// Desafio 9 jhon = array
+function encode(palavra) {
+  let jhon = palavra.split('');
+  for (let index in jhon) {
+    switch (jhon[index]) {
+      case 'a':
+        jhon[index] = '1';
+        break;
+      case 'e':
+        jhon[index] = '2';
+        break;
+      case 'i':
+        jhon[index] = '3';
+        break;
+      case 'o':
+        jhon[index] = '4';
+        break;
+      case 'u':
+        jhon[index] = '5';
+        break;
+    }
+  }
+  jhon = jhon.join('');
+  return jhon;
 }
-function decode() {
-  // seu código aqui
+
+// console.log(encode('hi there!'))
+
+function decode(numeros) {
+  let jhon = numeros.split('');
+  for (let index in jhon) {
+    switch (jhon[index]) {
+      case '1':
+        jhon[index] = 'a';
+        break;
+      case '2':
+        jhon[index] = 'e';
+        break;
+      case '3':
+        jhon[index] = 'i';
+        break;
+      case '4':
+        jhon[index] = 'o';
+        break;
+      case '5':
+        jhon[index] = 'u';
+        break;
+    }
+  }
+  jhon = jhon.join('');
+  return jhon;
 }
+
+console.log(decode('h3 th2r2!'))
 
 module.exports = {
   calcArea,
