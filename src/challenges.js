@@ -31,7 +31,7 @@ function splitSentence(j) {
 function concatName(jhon) {  //jhon = array
   let last = jhon[jhon.length - 1];
   let first = jhon[0];
-  return last + ' ' + first;
+  return last + ', ' + first;
 }
 // console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']))
 // console.log(concatName(['foquete', 'nao', 'tem','jhon', 'ré',]))
@@ -49,7 +49,7 @@ function footballPoints(wins,ties) {
 // Desafio 6
  function highestCount(jhon) {
   let contador = 0;
-  let NumMAX = Math.max(...jhon);  
+  let NumMAX = Math.max(...jhon);   //operador spread retorna o maior numero de array
   for (let index = 0; index < jhon.length; index++) {
     if (jhon[index] === NumMAX) {
       contador++;
@@ -58,21 +58,47 @@ function footballPoints(wins,ties) {
   return contador;
 }
 
-console.log(highestCount([9, 1, 2, 3, 9, 5, 7]))
-console.log(highestCount([0, 4, 4, 4, 9, 2, 1]))
-console.log(highestCount([0, 0, 0]))
-
-
+// console.log(highestCount([9, 1, 2, 3, 9, 5, 7]))
+// console.log(highestCount([0, 4, 4, 4, 9, 2, 1]))
+// console.log(highestCount([0, 0, 0]))
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse,cat1,cat2) {
+  let distanciaCat1 = Math.abs(cat1 - mouse);
+  let distanciaCat2 = Math.abs(cat2 - mouse);
+  if (distanciaCat1 < distanciaCat2) {
+    return 'cat1';
+  } else if (distanciaCat1 > distanciaCat2) {
+    return 'cat2';
+  }
+  return 'os gatos trombam e o rato foge';
 }
 
-// Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+// console.log(catAndMouse(2,6,5))
+// console.log(catAndMouse(2,3,5))
+// console.log(catAndMouse(2,5,5))
+
+// Desafio 8 jhon = array
+function fizzBuzz(jhon) {
+  let resultado = []
+  for (let index of jhon) {
+    if (index % 3 === 0 && index % 5 === 0) {
+      resultado.push('fizzBuzz');
+    } else if (index % 3 === 0) {
+      resultado.push('fizz');
+    } else if (index % 5 === 0) {
+      resultado.push('buzz');
+    } else {
+      resultado.push('bug!');
+    }
+  }
+  return resultado;
 }
+
+// console.log(fizzBuzz([2, 15, 7, 9, 45]))
+// console.log(fizzBuzz([7, 9]))
+// console.log(fizzBuzz([9, 25]))
+
 
 // Desafio 9
 function encode() {
