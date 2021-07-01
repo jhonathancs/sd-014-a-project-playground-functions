@@ -100,7 +100,7 @@ function fizzBuzz(jhon) {
 // console.log(fizzBuzz([9, 25]))
 
 
-// Desafio 9 jhon = array
+// Desafio 9 jhon = array posso usar replace dps tentar
 function encode(palavra) {
   let jhon = palavra.split('');
   for (let index in jhon) {
@@ -123,7 +123,7 @@ function encode(palavra) {
     }
   }
   jhon = jhon.join('');
-  return jhon;
+  return jhon.toString();
 }
 
 // console.log(encode('hi there!'))
@@ -147,13 +147,14 @@ function decode(numeros) {
       case '5':
         jhon[index] = 'u';
         break;
+  
     }
   }
   jhon = jhon.join('');
-  return jhon;
+  return jhon.toString()
 }
 
-console.log(decode('h3 th2r2!'))
+// console.log(decode('h3 th2r2!'))
 
 module.exports = {
   calcArea,
