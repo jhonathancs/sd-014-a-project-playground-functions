@@ -123,7 +123,7 @@ function encode(palavra) {
     }
   }
   jhon = jhon.join('');
-  return jhon.toString();
+  return jhon;
 }
 
 // console.log(encode('hi there!'))
@@ -151,7 +151,7 @@ function decode(numeros) {
     }
   }
   jhon = jhon.join('');
-  return jhon.toString()
+  return jhon;
 }
 
 // console.log(decode('h3 th2r2!'))
