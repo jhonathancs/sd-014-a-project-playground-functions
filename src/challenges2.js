@@ -14,7 +14,7 @@ function techList(jhon,name) {
  
 // console.log((techList(["React", "Jest", "HTML", "CSS", "JavaScript"],'jhon')))
 
-// Desafio 11 jhon = array lucas farias
+// Desafio 11 jhon = array lucas farias, lys prestes, felipe santiago grupo de estudo
 function generatePhoneNumber(phone) {
   if (phone.length !== 11) {
     return "Array com tamanho incorreto.";
@@ -40,14 +40,40 @@ function generatePhoneNumber(phone) {
 
 // console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]))
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let somaAB = Math.abs(lineA - lineB)
+  let somaAC = Math.abs(lineA - lineC);
+  let somaBC = Math.abs(lineB - lineC);
+  if (lineA < somaBC || lineB < somaAC || lineC < somaAB) {
+    return false;
+  }
+  somaAB = lineA + lineB;
+  somaAC = lineA + lineC;
+  somaBC = lineB + lineC;
+  if (lineA > somaBC || lineB > somaAC || lineC > somaAB) {
+    return false;
+  }
+  return true;
+} 
+
+// console.log(triangleCheck(10,14,8))
+
+// Desafio 13 array = jhon
+function hydrate(copos) {
+  let jhon = copos.split('');
+  let contador = 0;
+  for (let index of jhon) {
+    if (Number(index)) {
+      contador += Number(index);
+    }
+  }
+  if (contador === 1) {
+    return contador + ' copo de água'
+  }
+  return contador + ' copos de água'
 }
 
-// Desafio 13
-function hydrate() {
-  // seu código aqui
-}
+//  console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"))
 
 module.exports = {
   generatePhoneNumber,
