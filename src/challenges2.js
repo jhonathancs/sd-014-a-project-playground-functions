@@ -23,7 +23,7 @@ function generatePhoneNumber(phone) {
     for(let jhon = 0; jhon <= phone.length; jhon++) {
       contador = 0;
       for(let index = 0; index <= phone.length; index++) {
-      if (phone[index] < 0 | phone[index > 9]) {
+      if (phone[index] < 0 | phone[index] > 9 ) {
         return "não é possível gerar um número de telefone com esses valores";
       }
       if (phone[jhon] == phone[index]) {
